@@ -11,11 +11,9 @@ namespace ExamenIndividual
         //•Cada planta debe tener un nombre, un tiempo de vida, cuántos frutos/verduras te puede dar, el valor de la semilla y el valor del producto cuando crece
 
         protected float tiempovida;
-        protected float frutos;
-        protected Plantas(string nombre, float frutos, float tiempovida, int precioinicial, int preciofinal) : base("Planta", precioinicial, preciofinal)
+        protected Plantas(string nombre, float tiempovida, int precioinicial, int preciofinal) : base("Planta", precioinicial, preciofinal)
         {
             this.tiempovida = tiempovida;
-            this.frutos = frutos;
         }
 
         public string GetName()
