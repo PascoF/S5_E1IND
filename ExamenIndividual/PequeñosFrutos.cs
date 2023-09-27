@@ -11,7 +11,8 @@ namespace ExamenIndividual
 
         private Frutos frutos;
 
-        protected PequeñosFrutos(string nombre, Frutos frutos, float tiempovida, int precioinicial, int preciofinal) : base("Frutos Pequeños", tiempovida, precioinicial, preciofinal)
+        protected PequeñosFrutos(string nombre, float tiempovida, int precioinicial, int preciofinal, Frutos frutos)
+     : base("Frutos Pequeños", tiempovida, precioinicial, preciofinal)
         {
             this.nombre = nombre;
             this.frutos = frutos;
