@@ -1,0 +1,7 @@
+C:\Users\pc\Desktop\S5_E1IND\ExamenIndividual\bin\Debug\ExamenIndividual.exe.config
+C:\Users\pc\Desktop\S5_E1IND\ExamenIndividual\bin\Debug\ExamenIndividual.exe
+C:\Users\pc\Desktop\S5_E1IND\ExamenIndividual\bin\Debug\ExamenIndividual.pdb
+C:\Users\pc\Desktop\S5_E1IND\ExamenIndividual\obj\Debug\ExamenIndividual.csproj.AssemblyReference.cache
+C:\Users\pc\Desktop\S5_E1IND\ExamenIndividual\obj\Debug\ExamenIndividual.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\S5_E1IND\ExamenIndividual\obj\Debug\ExamenIndividual.exe
+C:\Users\pc\Desktop\S5_E1IND\ExamenIndividual\obj\Debug\ExamenIndividual.pdb

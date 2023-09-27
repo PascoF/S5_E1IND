@@ -43,6 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animales.cs" />
+    <Compile Include="AnimalGrande.cs" />
+    <Compile Include="AnimProduct.cs" />
+    <Compile Include="Arboles.cs" />
+    <Compile Include="Frutos.cs" />
+    <Compile Include="Granja.cs" />
+    <Compile Include="Granjaobj.cs" />
+    <Compile Include="PequeñosFrutos.cs" />
+    <Compile Include="Plantas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
