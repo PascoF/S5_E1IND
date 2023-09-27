@@ -11,7 +11,7 @@ namespace ExamenIndividual
 
         private AnimProduct AnimProduct;
 
-        protected AnimalGrande(string nombre, AnimProduct animProduct, float tiempovida, int precioinicial, int preciofinal) : base("Animales grandes", tiempovida, precioinicial, preciofinal)
+        public AnimalGrande(string nombre, float tiempovida, int precioinicial, int preciofinal, AnimProduct animProduct) : base("Animales grandes", tiempovida, precioinicial, preciofinal)
         {
             this.nombre = nombre;
             this.AnimProduct = AnimProduct;

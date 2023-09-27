@@ -11,143 +11,129 @@ namespace ExamenIndividual
         public void Acciones()
         {
 
-            List<Granjaobj> Granjaobjec = new List<Granjaobj>();
+            List<Granjaobj> granjaobj = new List<Granjaobj>();
 
-            //Lista
+            //Listaproductos
             Frutos Manzana = new Frutos("Manzana", 3);
             Frutos Naranja = new Frutos("Naranja", 4);
             Frutos Fresas = new Frutos("Frutos", 9);
-            Frutos Cerezas = new Cerezas("Cerezas", 13);
-            AnimProduct Carne = new Carne("Carne", 2);
+            Frutos Cerezas = new Frutos("Cerezas", 13);
+            AnimProduct Carne = new AnimProduct("Carne", 2);
+
+            //ListaAnimalesPlantas
             Arboles Manzanos = new Arboles("Manzano", 12, 14, 35, Manzana);
             Arboles Naranjos = new Arboles("Naranjo", 15, 16, 24, Naranja);
             PequeñosFrutos FresasPlanta = new PequeñosFrutos("Fresas", 4, 6, 23, Fresas);
-            PequeñosFrutos Cerezas = new PequeñosFrutos("Cerezas", 7, 4, 15, Cerezas);
+            PequeñosFrutos Cerezo = new PequeñosFrutos("Cerezo", 7, 4, 15, Cerezas);
             AnimalGrande Vaca = new AnimalGrande("Vaca", 9, 45, 60, Carne);
 
-            //Interfaz dinero
+            //Interfaz
 
-            Console.WriteLine("Para comenzar, ¿Con cuanto dinero vas a comenzar?");
-
-            string y = Console.ReadLine();
+            String nombre;
             float dinero;
+            Console.WriteLine("Para comenzar, inserte su nombre");
+            nombre = Console.ReadLine();
 
-            if (y! = "")
+            if (nombre != "")
             {
+                Console.WriteLine("¿Con cuanto dinero va a comenzar?");
                 dinero = float.Parse(Console.ReadLine());
-                if(dinero >= 0 && dinero <= 250)
+
+                if (dinero >= 0 && dinero <= 250)
                 {
-                    Acciones();
+                    //programar dinero
+                    Console.WriteLine("Listo.");
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+
+                    while (true)
+                    {
+                        Console.WriteLine("1. Comenzar partida");
+                        Console.WriteLine("2. Salir de la partida");
+
+                        string option;
+                        option = Console.ReadLine();
+
+                        switch (option)
+                        {
+                            case "1":
+                                GranjaVirtual(granjaobj);
+                                break;
+
+                            case "2":
+                                Environment.Exit(0);
+                                break;
+
+                        }
+                    }
+
                 }
                 else
                 {
-                    Console.WriteLine("Cantidad no valida.");
+                    Console.WriteLine("Error... Cantidad no valida.");
+                    Acciones();
                 }
             }
-            else
-            {
-                Console.WriteLine("Error, debe insertar un monto.");
 
-                Acciones();
-
-            }
 
         }
-      
-    }
 
-    static void GranjaVirtual(List<Granjaobj> Granjaobj)
-    {
-
-        Console.WriteLine("\nBienvenido a la granja virtual, ¿Que va a hacer?")
-
-        Console.WriteLine("1. Comprar terreno (100)");
-        Console.WriteLine("2. Comprar semillas");
-        Console.WriteLine("3. Comprar animales");
-        Console.WriteLine("4. Revisar granja");
-
-        string option = Console.ReadLine();
-
-        switch (option)
+        static void GranjaVirtual(List<Granjaobj> granjaobj)
         {
-            case "1":
-                // Comprar terreno (100)
-                break;
 
-            case "2":
-                //Comprar semillas
-               
-                break;
+            Console.WriteLine("\nBienvenido a la granja virtual, ¿Que va a hacer?");
 
-            case "3":
-                //Comprar animales"
-                break;
-            case "4":
-                //Revisar granja
-                Console.WriteLine("Esta es su granja, ¿que va a hacer?(Elija un numero)");
+            Console.WriteLine("1. Comprar terreno (100)");
+            Console.WriteLine("2. Comprar semillas");
+            Console.WriteLine("3. Comprar animales");
+            Console.WriteLine("4. Ver inventario.");
+            Console.WriteLine("5. Volver");
 
-                Console.WriteLine("1. Coseshar plantas.");
-                Console.WriteLine("2. Matar animales");
-                Console.WriteLine("3. Ver inventario de granja.");
-                Console.WriteLine("4. Pasar turno.");
-                Console.WriteLine("5. Vender productos.");
-                Console.WriteLine("6. Salir.");
-                string z = Console.ReadLine();
-                float elecc;
+            string option = Console.ReadLine();
 
-                if (x == "1")
-                {
-                    Console.WriteLine("¿Que planta va a cosechar?")
-                        string p = Console.ReadLine();
+            switch (option)
+            {
+                case "1":
+                    Console.WriteLine("Cada trozo de terreno sale 100 monedas.");
+                    //programar terrenos
+                    GranjaVirtual(granjaobj);
+                    break;
 
-                    //mostrar inventario de semillas
+                case "2":
+                    Console.WriteLine("Las semillas en la tienda son:");
+                    //Comprar semillas
+                    GranjaVirtual(granjaobj);
+                    break;
+
+                case "3":
+                    Console.WriteLine("Los animales en la tienda son:");
+
+                    //Comprar animales"
+                    GranjaVirtual(granjaobj);
+                    break;
+
+                case "4":
+
+                    Console.WriteLine("Este es su inventario:");
+                    for (int i = 0; i < granjaobj.Count; i++)
+                    {
+                        Console.WriteLine($"{granjaobj[i].GetName()}");
+                    }
+                    GranjaVirtual(granjaobj);
+                    break;
+
+                case "5":
 
                     return;
-                    //prov.
-                }
 
-                if (x == "2")
-                {
-                    Console.WriteLine("Inventario completo:")
 
-                    int i = 1;
-                    foreach (Granjaobj Granjaobj in Granjaobjec)
-                    {
 
-                        Console.WriteLine(i + "." + Granjaobj.GetName());
-                        i++;
-                    }
-                }
-        }
-                if (x == "3")
-                {
-
-                }
-                if (x == "4")
-                {
-                    Console.WriteLine("Pasando de turno...")
-                        //Programar el paso de turnos
-                        return;
-                }
-                if (x == "5")
-                {
-            Console.WriteLine("¿Que producto va a vender?")
-                int i = 1;
-            foreach (Granjaobj Granjaobj in Granjaobjec)
-            {
-                Console.WriteLine(i + "." + Granjaobj.GetName());
-                i++;
             }
         }
 
-        if (x == "6")
-        {
-            Environment.Exit(0);
-        }
-
-
-        break;
-
-        }
     }
+
 }
+
+
+
