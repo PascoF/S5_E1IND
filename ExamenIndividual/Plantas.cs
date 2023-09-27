@@ -12,7 +12,7 @@ namespace ExamenIndividual
 
         protected float tiempovida;
         protected float frutos;
-        protected Plantas(string nombre, float frutos, float tiempovida, int precioinicial, int preciofinal) : base("Planta", preciofinal, preciofinal)
+        protected Plantas(string nombre, float frutos, float tiempovida, int precioinicial, int preciofinal) : base("Planta", precioinicial, preciofinal)
         {
             this.tiempovida = tiempovida;
             this.frutos = frutos;
