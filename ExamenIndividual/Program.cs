@@ -8,8 +8,13 @@ namespace ExamenIndividual
 {
     class Program
     {
+       
         static void Main(string[] args)
         {
+            Granja Granja = new Granja();
+            Granja.Acciones();
         }
     }
+    
 }
+
